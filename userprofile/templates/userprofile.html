@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <title>{% block title %} | User Profile{% endblock %}</title>
+
+    <h2>{{ user.username }}'s Games</h2>
+
+    <a href="/userprofile/addGame/"><button>Add New Game</button></a>
+
+    {% for game in object_list %}
+
+        <h2><a href="/userprofile/addGame/{{game.id}}">{{ game.title }}</a></h2>
+
+    {% endfor %}
+
+{% endblock content %}
