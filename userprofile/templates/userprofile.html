@@ -1,17 +1,27 @@
 {% extends "base.html" %}
-
 {% block content %}
+    <title>{% block title %} | {{ user.username }}{% endblock %}</title>
 
-    <title>{% block title %} | User Profile{% endblock %}</title>
+    <div id="userprofile">
+        <div id="userprofileheadercontainer">
+            <h2 id="usersgamesheader">Your Games</h2>
+            <a id="addgamelink" href="/userprofile/addGame/"><button>Add New Game</button></a>
+        </div>
+        {% if games %}
 
-    <h2>{{ user.username }}'s Games</h2>
+            {% for game in games %}
+                <div class="gamelistitems">
+                    <a href="/userprofile/editGame/{{game.id}}"><img class="gamelistimages" src="/media/{{ game.image }}"></a>
+                    <b><a class="gamelisttitles" href="/userprofile/editGame/{{game.id}}">{{ game.title }}</a></b>
+                    <div class="gamelistdescriptions">{{ game.description }}</div>
+                </div>
+            {% endfor %}
 
-    <a href="/userprofile/addGame/"><button>Add New Game</button></a>
+        {% else %}
+            <div class="gamelistitems">
+                <div id="nogameslabel">No games</div>
+            </div>
 
-    {% for game in object_list %}
-
-        <h2><a href="/userprofile/addGame/{{game.id}}">{{ game.title }}</a></h2>
-
-    {% endfor %}
-
+        {% endif %}
+    </div>
 {% endblock content %}

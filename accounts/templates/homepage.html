@@ -1,9 +1,55 @@
 {% extends "base.html" %}
 
+{% load staticfiles %}
+
 {% block content %}
 
-    <title>{% block title %}{% endblock %}</title>
-
-    <h2>Homepage</h2>
+    <title>{% block title %} | Share your pygames with the world{% endblock %}</title>
+    <div id="homewallpaper">
+        <div id="hometitle">The PyGame Developer's Portal</div>
+        <div id="homewallpapergamelinkcontainer">
+            <a href="/games/"><button id="homewallpapergamelink">Look at some games</button></a>
+            <a href="/accounts/register/"><button id="homewallpapersignuplink">Sign Up</button></a>
+        </div>
+    </div>
+    {% if not user.is_authenticated %}
+    <div id="newtopygamecontainer">
+        <div id="newtopygametitle">New To PyGame?</div>
+        <div id="threemainlinkscontainer">
+            <div class="threemainlinks">
+                <img class="grayicons" src="{% static 'images/python_gray.png' %}">
+                <div class="grayiconlabels">Downloads</div>
+                <div class="grayicondescriptions">Get your development environment up and running with a quick download of Python and Pygame.</div>
+                <a href="/downloads/"><div class="grayiconlinks">Download PyGame ></div></a>
+            </div>
+            <div class="threemainlinks">
+                <img class="grayicons" src="{% static 'images/documentation_gray.png' %}">
+                <div class="grayiconlabels">Documentation</div>
+                <div class="grayicondescriptions">Take a look at an introduction to PyGame, and go through the documentation to get started.</div>
+                <a href="/documentation/"><div class="grayiconlinks">Documentation ></div></a>
+            </div>
+            <div class="threemainlinks">
+                <img class="grayicons" src="{% static 'images/add_user_gray.png' %}">
+                <div class="grayiconlabels">Sign Up</div>
+                <div class="grayicondescriptions">If you're interested in PyGame, or have built some games on your own, sign up and share your code!</div>
+                <a href="/accounts/register/"><div class="grayiconlinks">Sign Up ></div></a>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    <div id="recentgamesoutercontainer">
+        <div id="recentgamestitle">Recent Games</div>
+        <div id="recentgamesinnercontainer">
+            {% for game in games %}
+                <div class="gamelistings">
+                    <a href="/games/{{game.id}}"><img class="gamelistingimage" src="/media/{{ game.image }}"></a>
+                    <br>
+                    <a class="gamelistingtitle" href="/games/{{game.id}}">{{ game.title }}</a>
+                    <div class="gamelistingdescription">{{ game.description }}</div>
+                </div>
+            {% endfor %}
+        </div>
+        <a href="/games/"><button id="recentgameslink">More Games</button></a>
+    </div>
 
 {% endblock content %}

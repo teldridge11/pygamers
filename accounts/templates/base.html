@@ -4,26 +4,33 @@
     <head>
         <title>PyGamers{% block title %}{% endblock %}</title>
         <link rel="stylesheet" type="text/css" href="{% static 'site.css' %}" />
+        <script type="text/javascript" src="{% static 'site.js' %}"></script>
     </head>
     <body>
-        <header id="page_header">
-            <a href="/"><img id="python_logo" src="{% static 'images/python.gif' %}"/></a>
-            <nav id="page_header_nav">
-                <a class="page_header_nav_links" href="/games/">Games</a>
-                <a class="page_header_nav_links" href="/downloads/">Downloads</a>
-            </nav>
-            <nav id="login_register_nav">
-                {% if user.is_authenticated %}
-                <a class="login_register_nav_links" href="/userprofile/">Profile</a> &nbsp|&nbsp <a class="login_register_nav_links" href="/accounts/logout/">Logout</a>
-                {% else %}
-                <a class="login_register_nav_links" href="/accounts/login/">Login</a> &nbsp|&nbsp <a class="login_register_links" href="/accounts/register">Register</a>
-                {% endif %}
-            </nav>
-        </header>
-        <div id="page_container">
-            {% block content %}
+        <div id="pagecontainersansfooter">
+            <header id="page_header">
+                <a href="/"><img id="python_logo" src="{% static 'images/pygame_logo.gif' %}"/></a>
+                <nav id="page_header_nav">
+                    <a class="page_header_nav_links" href="/games/">Games</a>
+                    <a class="page_header_nav_links" href="/downloads/">Downloads</a>
+                    <a class="page_header_nav_links" href="/documentation/">Documentation</a>
+                </nav>
+                <nav id="login_register_nav">
+                    {% if user.is_authenticated %}
+                    <a class="login_register_nav_links" href="/userprofile/"><button>Profile</button></a> &nbsp|&nbsp <a class="login_register_nav_links" href="/accounts/logout/">Logout</a>
+                    {% else %}
+                    <a class="login_register_nav_links" href="/accounts/login/"><button class="clearbutton">Login</button></a> &nbsp&nbsp <a class="login_register_nav_links" href="/accounts/register/"><button>Register</button></a>
+                    {% endif %}
+                </nav>
+            </header>
+            <div id="page_container">
+                {% block content %}
 
-            {% endblock %}
+                {% endblock %}
+            </div>
         </div>
+        <footer>
+            <div id="copywrite">&copy; PyGamers.com 2015</div>
+        </footer>
     </body>
 </html>

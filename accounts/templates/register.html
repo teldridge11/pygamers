@@ -4,31 +4,18 @@
 
     <title>{% block title %} | Register{% endblock %}</title>
 
-    <h2>Register</h2>
-
-    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
-
-    <form action="/accounts/register/" method="POST">{% csrf_token %}
-
-        <label for="id_username">Username:</label>
-        <br>
-        <input id="id_username" name="username" type="text">
-        <br><br>
-        <label for="id_email">Email:</label>
-        <br>
-        <input id="id_email" name="email" type="email">
-        <br><br>
-        <label for="id_password1">Password:</label>
-        <br>
-        <input id="id_password1" name="password1" type="password">
-        <br><br>
-        <label for="id_password2">Confirm:</label>
-        <br>
-        <input id="id_password2" name="password2" type="password">
-        <br><br>
-
-        <input type="submit" value="Register">
-
+    <form action="/accounts/register/" method="post">{% csrf_token %}
+        <h2>Register</h2>
+        {% for field in form %}
+            <div class="fieldWrapper">
+                <div class="formfielderrors">{{ field.errors.as_text }}</div>
+                {{ field.label_tag }}
+                <br>
+                {{ field }}
+                <br><br>
+            </div>
+        {% endfor %}
+        <input type="submit" value="Save" class="greenButton">
     </form>
 
 {% endblock content %}

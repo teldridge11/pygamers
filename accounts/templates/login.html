@@ -4,11 +4,9 @@
 
     <title>{% block title %} | Login{% endblock %}</title>
 
-    <h2>Login</h2>
-
-    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
-
     <form action="/accounts/auth/" method="POST">
+        <h2>Login</h2>
+        {% if error_message %}<div class="formfielderrors">* {{ error_message }}</div>{% endif %}
         {% csrf_token %}
         <label for="username">Username: </label>
         <br>
@@ -18,7 +16,9 @@
         <br>
         <input type="password" name="password" value="" id="password">
         <br><br>
-        <input type="submit" value="Login">
+        <a href="/accounts/password_reset/">Forgot Password?</a>
+        <br><br>
+        <input type="submit" value="Login" class="greenButton">
     </form>
 
 {% endblock content %}

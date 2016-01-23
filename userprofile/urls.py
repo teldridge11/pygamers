@@ -4,7 +4,8 @@ from models import Game
 import views
 
 urlpatterns = [
-    url(r'^$', ListView.as_view(queryset=Game.objects.all().order_by('-title'), template_name = 'userprofile.html')),
-    url(r'^addGame/$', views.addGame, name='addGame'),
-    url(r'^addGame/(?P<pk>\d+)/$', DetailView.as_view(model=Game, template_name='addGame.html')),
+    url(r'^$', views.user_profile, name='userprofile'),
+    url(r'^addGame/$', views.add_game, name='addGame'),
+    url(r'^editGame/(?P<id>\d+)/$', views.edit_game, name='editGame'),
+    url(r'^addGame/(?P<pk>\d+)/$', DetailView.as_view(model=Game, template_name='addgame.html')),
 ]

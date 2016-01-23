@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <title>{% block title %} | {{ game.title }}{% endblock %}</title>
+
+    <div id="gameprofilecontainer">
+        <div id="gameimagecontainer">
+            <img class="gameprofileimage" src="/media/{{ game.image }}">
+        </div>
+        <div id="gameinfocontainer">
+            <div id="gameprofiletitle">{{game.title}}</div>
+            <div class="gameprofilelabels">Created by <a>{{game.user}}</a></div>
+            <br>
+            <div class="gameprofilelabels">Requirements:</div>
+            <div id="gameprofilerequirements">{{game.requirements}}</div>
+            <br>
+            <div class="gameprofilelabels">Description:</div>
+            <div id="gameprofiledescription">{{game.description}}</div>
+        </div>
+    </div>
+    <div id="gamecodecontainer">
+        {{game.code}}
+    </div>
+
+{% endblock content %}
