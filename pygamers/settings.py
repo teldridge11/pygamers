@@ -34,7 +34,6 @@ INSTALLED_APPS = [
     'userprofile',
     'accounts',
     'games',
-    'pagedown',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -125,6 +124,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-#MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_ROOT = 'media/'
 MEDIA_URL = '/media/'

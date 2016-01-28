@@ -2,9 +2,7 @@ from django.shortcuts import render_to_response
 from forms import MyRegistrationForm
 from django.http import HttpResponseRedirect
 from django.contrib import auth
-from django.contrib.auth.models import User
-from django.core.context_processors import csrf
-from django.contrib.auth.views import password_reset
+from django.template.context_processors import csrf
 
 def login_view(request):
     args = {}

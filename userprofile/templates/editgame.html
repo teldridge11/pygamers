@@ -4,7 +4,7 @@
 
     <title>{% block title %} | Edit {{ game.title }}{% endblock %}</title>
 
-    <form action="/userprofile/editGame/{{ game.id }}/" method="post">{% csrf_token %}
+    <form action="/userprofile/editGame/{{ game.id }}/" method="post" enctype="multipart/form-data">{% csrf_token %}
         <h2>Edit Game</h2>
         {% for field in form.visible_fields %}
             <div class="fieldWrapper">

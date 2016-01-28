@@ -1,14 +1,14 @@
 from django.shortcuts import render_to_response
 from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
-from django.core.context_processors import csrf
+from django.template.context_processors import csrf
 from forms import GameForm
-from datetime import datetime
 from models import Game
-from django.views.generic import ListView
-from django.contrib.auth.models import User
-from django.shortcuts import get_object_or_404, render
-from django.template import RequestContext
+from PIL import Image
+from pygments import highlight
+from pygments.lexers import PythonLexer
+from pygments.formatters import HtmlFormatter
+#highlight(code, PythonLexer(), HtmlFormatter())
 
 @login_required
 def user_profile(request):
@@ -21,17 +21,18 @@ def user_profile(request):
 @login_required
 def add_game(request):
     user = request.user
-    error_message = None
 
     if request.method == 'POST':
-        form = GameForm(request.POST)
+        form = GameForm(request.POST, request.FILES)
         if form.is_valid():
             form = form.save(commit=False)
+            image = Image.open(form.image)
+            box = (0, 0, 200, 200)
+            cropped = image.crop(box)
+            #form.image = cropped
             form.user = request.user
             form.save()
             return HttpResponseRedirect('/userprofile')
-        else:
-            error_message = "Invalid Input"
     else:
         form = GameForm()
 
@@ -39,7 +40,6 @@ def add_game(request):
     args.update(csrf(request))
     args['user'] = user
     args['form'] = form
-    args['error_message'] = error_message
 
     return render_to_response('addgame.html', args)
 
@@ -47,11 +47,16 @@ def add_game(request):
 def edit_game(request, id):
     user = request.user
     game = Game.objects.get(id=id)
+    image = game.image
 
     if request.method == 'POST':
-        form = GameForm(request.POST, instance=game)
+        form = GameForm(request.POST, request.FILES, instance=game)
         if form.is_valid():
             form = form.save(commit=False)
+            image = Image.open(form.image)
+            box = (0, 0, 200, 200)
+            cropped = image.crop(box)
+            #form.image = cropped
             if game.deleteGame == True:
                 instance = Game.objects.get(id=game.id)
                 instance.delete()
@@ -71,5 +76,6 @@ def edit_game(request, id):
     args['user'] = user
     args['form'] = form
     args['game'] = game
+    args['image'] = image
 
     return render_to_response('editgame.html', args)

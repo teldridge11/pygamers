@@ -32,7 +32,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/Users/tomeldridge/Desktop/Pygamers/venv"
+set -gx VIRTUAL_ENV "/Users/tomeldridge/Desktop/Misc/Hobbies/Programming/Projects/Pygamers/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

@@ -4,7 +4,7 @@
 
     <title>{% block title %} | Add Game{% endblock %}</title>
 
-    <form action="/userprofile/addGame/" method="post">{% csrf_token %}
+    <form action="/userprofile/addGame/" method="post" enctype="multipart/form-data">{% csrf_token %}
         <h2>Add New Game</h2>
         {% for field in form.visible_fields %}
             <div class="fieldWrapper">
