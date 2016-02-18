@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-
+(% load pygmentify %}
 {% block content %}
 
     <title>{% block title %} | {{ game.title }}{% endblock %}</title>
@@ -20,7 +20,9 @@
         </div>
     </div>
     <div id="gamecodecontainer">
-        {{game.code}}
+        <pre><code class="python">
+{{ game.code }}
+        </code></pre>
     </div>
 
 {% endblock content %}

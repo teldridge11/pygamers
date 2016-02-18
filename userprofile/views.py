@@ -5,10 +5,6 @@ from django.template.context_processors import csrf
 from forms import GameForm
 from models import Game
 from PIL import Image
-from pygments import highlight
-from pygments.lexers import PythonLexer
-from pygments.formatters import HtmlFormatter
-#highlight(code, PythonLexer(), HtmlFormatter())
 
 @login_required
 def user_profile(request):

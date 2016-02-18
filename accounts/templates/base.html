@@ -5,6 +5,9 @@
         <title>PyGamers{% block title %}{% endblock %}</title>
         <link rel="stylesheet" type="text/css" href="{% static 'site.css' %}" />
         <script type="text/javascript" src="{% static 'site.js' %}"></script>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/atelier-cave-light.min.css">
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
         {{ form.media }}
     </head>
     <body>
@@ -13,8 +16,8 @@
                 <a href="/"><img id="python_logo" src="{% static 'images/pygame_logo.gif' %}"/></a>
                 <nav id="page_header_nav">
                     <a class="page_header_nav_links" href="/games/">Games</a>
-                    <a class="page_header_nav_links" href="/downloads/">Downloads</a>
-                    <a class="page_header_nav_links" href="/documentation/">Documentation</a>
+                    <a class="page_header_nav_links" href="http://www.pygame.org/download.shtml">Downloads</a>
+                    <a class="page_header_nav_links" href="http://www.pygame.org/docs/">Documentation</a>
                 </nav>
                 <nav id="login_register_nav">
                     {% if user.is_authenticated %}

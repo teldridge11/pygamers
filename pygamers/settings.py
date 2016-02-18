@@ -25,7 +25,7 @@ SECRET_KEY = '!bh5c2!!6r!u1ucia4i+)zc-swr)_$6#dk*i&1yd6agmu@jad_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -126,3 +126,14 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = 'media/'
 MEDIA_URL = '/media/'
+
+# Email Settings
+
+# Allow email from non-SMTP development device
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'tomeldridge00@gmail.com'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = 'Kangar00'

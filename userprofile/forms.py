@@ -5,7 +5,7 @@ class GameForm(forms.ModelForm):
 
     image = forms.ImageField()
     code = forms.Textarea()
-    deleteGame = forms.BooleanField(required=False, widget=forms.HiddenInput())
+    deleteGame = forms.BooleanField(required=False)
 
     class Meta:
         model = Game
