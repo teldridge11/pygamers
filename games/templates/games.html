@@ -5,7 +5,7 @@
     <title>{% block title %} | Games{% endblock %}</title>
 
     <div id="gamelistingcontainer">
-        <h2>Games</h2>
+        <h2 id="gamessectiontitle">Games</h2>
     {% for game in games %}
         <div class="gamelistings">
             <a href="/games/{{game.id}}"><img class="gamelistingimage" src="/media/{{ game.image }}"></a>

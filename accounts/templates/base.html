@@ -13,19 +13,24 @@
     <body>
         <div id="pagecontainersansfooter">
             <header id="page_header">
-                <a href="/"><img id="python_logo" src="{% static 'images/pygame_logo.gif' %}"/></a>
-                <nav id="page_header_nav">
-                    <a class="page_header_nav_links" href="/games/">Games</a>
-                    <a class="page_header_nav_links" href="http://www.pygame.org/download.shtml">Downloads</a>
-                    <a class="page_header_nav_links" href="http://www.pygame.org/docs/">Documentation</a>
-                </nav>
-                <nav id="login_register_nav">
-                    {% if user.is_authenticated %}
-                    <a class="login_register_nav_links" href="/userprofile/"><button>Profile</button></a> &nbsp|&nbsp <a class="login_register_nav_links" href="/accounts/logout/">Logout</a>
-                    {% else %}
-                    <a class="login_register_nav_links" href="/accounts/login/"><button class="clearbutton">Login</button></a> &nbsp&nbsp <a class="login_register_nav_links" href="/accounts/register/"><button>Register</button></a>
-                    {% endif %}
-                </nav>
+                <div>
+                    <img id="mobile_menu" onclick="mobileMenu('page_header_nav');" src="{% static 'images/green_nav.png' %}"/>
+                    <a href="/"><img id="python_logo" src="{% static 'images/pygame_logo.gif' %}"/></a>
+                    <nav id="page_header_nav">
+                        <div class="pagelinkcontainers"><a class="page_header_nav_links" href="/games/">Games</a></div>
+                        <div class="pagelinkcontainers"><a class="page_header_nav_links" href="http://www.pygame.org/download.shtml">Downloads</a></div>
+                        <div class="pagelinkcontainers"><a class="page_header_nav_links" href="http://www.pygame.org/docs/">Documentation</a></div>
+                        <div id="login_register_pagelinkcontainer" class="pagelinkcontainers">
+                            <div id="login_register_nav">
+                            {% if user.is_authenticated %}
+                            <a class="login_register_nav_links" href="/userprofile/"><button>Profile</button></a> &nbsp|&nbsp <a class="login_register_nav_links" href="/accounts/logout/">Logout</a>
+                            {% else %}
+                            <a class="login_register_nav_links" href="/accounts/login/"><button class="clearbutton">Login</button></a> &nbsp&nbsp <a class="login_register_nav_links" href="/accounts/register/"><button>Register</button></a>
+                            {% endif %}
+                            </div>
+                        </div>
+                    </nav>
+                </div>
             </header>
             <div id="page_container">
                 {% block content %}

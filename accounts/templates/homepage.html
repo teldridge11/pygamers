@@ -9,11 +9,11 @@
         <div id="hometitle">The PyGame Developer's Portal</div>
             {% if user.is_authenticated %}
                 <div id="homewallpapergamelinkcontainer1">
-                    <a href="/games/"><button id="homewallpapergamelink">Look at some games</button></a>
+                    <a href="/games/"><button class="homewallpapergamelink">Look at some games</button></a>
                 </div>
             {% else %}
                 <div id="homewallpapergamelinkcontainer2">
-                    <a href="/games/"><button id="homewallpapergamelink">Look at some games</button></a>
+                    <a href="/games/"><button class="homewallpapergamelink">Look at some games</button></a>
                     <a href="/accounts/register/"><button id="homewallpapersignuplink">Sign Up</button></a>
                 </div>
             {% endif %}

@@ -114,15 +114,21 @@ header {
     float: left;
 }
 #page_header_nav {
+    width: 80%;
     float: left;
     margin-left: 20px;
+}
+.pagelinkcontainers {
+    float: left;
 }
 .page_header_nav_links {
     line-height: 70px;
     margin-right: 50px;
 }
+#login_register_pagelinkcontainer {
+    float: right !important;
+}
 #login_register_nav {
-    float: right;
     margin-right: 20px;
     color: green;
     margin-top: 20px;
@@ -144,6 +150,17 @@ footer {
     font-weight: 100;
     line-height: 80px;
     padding-left: 20px;
+}
+#mobile_menu {
+    height: 40px;
+    width: 40px;
+    padding-top: 15px;
+    padding-left: 20px;
+    display: none;
+    float: left;
+}
+#mobile_menu:hover {
+    cursor:pointer;
 }
 
 
@@ -174,6 +191,8 @@ footer {
     margin-bottom: 40px;
     border-radius: 4px;
     border: 1px solid lightgray;
+    overflow: auto;
+    padding-bottom: 10px;
 }
 #usersgamesheader {
     float: left;
@@ -282,7 +301,7 @@ footer {
     text-align: center;
     width: 450px;
 }
-#homewallpapergamelink {
+.homewallpapergamelink {
     height: 40px;
     width: 200px;
     font-size: 16px;
@@ -305,12 +324,13 @@ footer {
     padding-top: 150px;
 }
 #newtopygamecontainer {
-    height: 550px;
+    min-height: 550px;
     width: 100%;
     text-align: center;
     font-size: 36px;
     margin-top: 40px;
     color: #303030;
+    overflow: auto;
 }
 #threemainlinkscontainer {
     width: 1000px;
@@ -325,7 +345,7 @@ footer {
     margin: 40px;
 }
 #recentgamesinnercontainer {
-    height: 440px;
+    min-height: 440px;
     width: 1000px;
     margin: 0 auto;
     padding-top: 30px;
@@ -336,7 +356,6 @@ footer {
     border-bottom: 1px solid lightgray;
     min-height: 570px;
     width: 100%;
-    overflow: auto;
     margin: 0 auto;
     text-align:center;
 }
@@ -420,4 +439,131 @@ footer {
 #gameprofiletitle {
     font-weight: bold;
     font-size: 32px;
+}
+
+@media only screen and (min-width: 1201px) {
+    #page_header_nav {
+        display: block !important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #page_header_nav {
+        position: absolute;
+        margin-top: 71px;
+        margin-left: 0px;
+        float: right !important;
+        display: none;
+    }
+    .pagelinkcontainers {
+        float: none;
+        line-height: 50px;
+        background-color: black;
+        padding-left: 0px;
+        width: 200px;
+        text-align: center;
+        margin-top: 0px;
+        color: white;
+    }
+    .pagelinkcontainers:hover {
+        cursor: pointer;
+    }
+    .page_header_nav_links {
+        margin-right: 0px;
+    }
+    #login_register_pagelinkcontainer {
+        float: none !important;
+    }
+    #login_register_nav {
+        margin-top: 0px;
+        margin-right: 0px;
+        float: none;
+    }
+    #mobile_menu {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #hometitle {
+        font-size: 36px;
+    }
+    #recentgamesinnercontainer, #gamelistingcontainer, #threemainlinkscontainer {
+        width: 100%;
+    }
+    #recentgamesoutercontainer {
+        background-color: white;
+    }
+    #newtopygamecontainer {
+        width: 100%;
+    }
+    #newtopygametitle {
+        margin-bottom: 40px;
+    }
+    #gamessectiontitle {
+        padding-left: 20px;
+    }
+    .threemainlinks {
+        width: 100%;
+        margin: 0;
+    }
+    .gamelistings {
+        width: 100%;
+        float: none;
+        padding: 0px;
+        padding-bottom: 40px;
+        text-align: center;
+    }
+    .gamelistingdescription {
+        width: 300px;
+        margin: 0 auto;
+    }
+    #homewallpapergamelinkcontainer2 {
+        width: 200px;
+    }
+    .homewallpapergamelink, #homewallpapersignuplink {
+        margin-top: 20px;
+        width: 100%;
+        float: none;
+    }
+    #gameinfocontainer, #gameimagecontainer {
+        float:none;
+        padding: 0px;
+        padding-top: 10px;
+    }
+    #gameinfocontainer {
+        width: 100%;
+    }
+    #gameprofilecontainer {
+        padding-left: 20px;
+        width: 100%;
+    }
+    #gameprofiledescription {
+        padding-right: 20px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    form {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+    input[type=text], input[type=password], input[type=email] {
+        width: 100%;
+    }
+    #userprofile {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #userprofileheadercontainer {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .gamelistitems {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
