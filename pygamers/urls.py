@@ -3,6 +3,7 @@ from django.contrib import admin
 import views
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     url(r'^$', views.home_page, name='home_page'),
@@ -11,3 +12,5 @@ urlpatterns = [
     url(r'^games/', include('games.urls', namespace='games')),
     url(r'^admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += staticfiles_urlpatterns()
