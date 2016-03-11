@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="40c790eb-72a8-4516-9190-b4c3408b94e6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pygamers/settings.py" afterPath="$PROJECT_DIR$/pygamers/settings.py" />
-    </list>
+    <list default="true" id="40c790eb-72a8-4516-9190-b4c3408b94e6" name="Default" comment="" />
     <ignored path="Pygamers.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
