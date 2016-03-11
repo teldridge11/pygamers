@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'pygamers.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'pygamers',
-        'USER': 'tomeldridge',
-        'PASSWORD': '',
-        'HOST': 'localhost',
+        'NAME': 'd6qb0pni46nonn',
+        'USER': 'paedswhqtydxnt',
+        'PASSWORD': 'f7040uVvzDmEtO5yKR6ozhvc55',
+        'HOST': 'ec2-54-83-56-31.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
