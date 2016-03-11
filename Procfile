@@ -1,1 +1,1 @@
-web: gunicorn pygamers.wsgi
+web: gunicorn pygamers.wsgi:application --log-file -
