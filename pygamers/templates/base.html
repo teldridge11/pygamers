@@ -3,8 +3,8 @@
 <html>
     <head>
         <title>PyGamers{% block title %}{% endblock %}</title>
-        <link rel="stylesheet" type="text/css" href="{% static 'site.css' %}" />
-        <script type="text/javascript" src="{% static 'site.js' %}"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'pygamers/site.css' %}" />
+        <script type="text/javascript" src="{% static 'pygamers/site.js' %}"></script>
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/atelier-cave-light.min.css">
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
@@ -14,8 +14,8 @@
         <div id="pagecontainersansfooter">
             <header id="page_header">
                 <div>
-                    <img id="mobile_menu" onclick="mobileMenu('page_header_nav');" src="{% static 'images/green_nav.png' %}"/>
-                    <a href="/"><img id="python_logo" src="{% static 'images/pygame_logo.gif' %}"/></a>
+                    <img id="mobile_menu" onclick="mobileMenu('page_header_nav');" src="{% static 'pygamers/images/green_nav.png' %}"/>
+                    <a href="/"><img id="python_logo" src="{% static 'pygamers/images/pygame_logo.gif' %}"/></a>
                     <nav id="page_header_nav">
                         <div class="pagelinkcontainers"><a class="page_header_nav_links" href="/games/">Games</a></div>
                         <div class="pagelinkcontainers"><a class="page_header_nav_links" href="http://www.pygame.org/download.shtml">Downloads</a></div>
