@@ -286,7 +286,7 @@ footer {
     height: 550px;
     width: 100%;
     background-size: cover;
-    background-image: url(/static/images/gaming.jpg);
+    background-image: url(/static/pygamers/images/gaming.jpg);
     background-position: center;
 }
 #homewallpapergamelinkcontainer1 {
