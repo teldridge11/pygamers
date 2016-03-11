@@ -2,29 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40c790eb-72a8-4516-9190-b4c3408b94e6" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/accounts/static/images/Pacman.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/accounts/static/images/add_user_gray.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/accounts/static/images/documentation_gray.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/accounts/static/images/gaming.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/accounts/static/images/green_nav.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/accounts/static/images/pygame_logo.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/accounts/static/images/python.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/accounts/static/images/python_gray.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/accounts/static/site.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/accounts/static/site.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/Pacman.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/add_user_gray.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/documentation_gray.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/gaming.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/green_nav.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/pygame_logo.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/python.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/images/python_gray.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/site.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/static/site.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/accounts/templates/base.html" afterPath="$PROJECT_DIR$/pygamers/templates/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pygamers/settings.py" afterPath="$PROJECT_DIR$/pygamers/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Pygamers.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,8 +66,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pygamers/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.295302">
-              <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.57214767">
+              <caret line="147" column="1" selection-start-line="147" selection-start-column="1" selection-end-line="147" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -693,9 +671,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1366" height="693" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32852563" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1070,8 +1048,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pygamers/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.295302">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.57214767">
+          <caret line="147" column="1" selection-start-line="147" selection-start-column="1" selection-end-line="147" selection-end-column="1" />
           <folding />
         </state>
       </provider>
